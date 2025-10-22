@@ -1,0 +1,7 @@
+Deal Bundle : CAF_DealBundle_v4.0.zip
+Version     : v4.0
+Date        : 2025-10-20
+$1212538 bytes
+SHA256: 0e9fd17d18f1a600adb0cdd7090543f2be502af585acab8603415a7d743ed103
+Size: 202719 bytes
+SHA256: 0e9fd17d18f1a600adb0cdd7090543f2be502af585acab8603415a7d743ed103

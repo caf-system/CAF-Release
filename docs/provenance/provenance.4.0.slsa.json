@@ -1,0 +1,29 @@
+{
+  "_type": "https://slsa.dev/provenance/v1",
+  "predicateType": "https://slsa.dev/provenance/v1",
+  "predicate": {
+    "buildType": "https://slsa.dev/container/build",
+    "builder": {
+      "id": "CAF/caf-absolute.ps1"
+    },
+    "invocation": {
+      "parameters": {
+        "platform": "windows+docker",
+        "image": "ghcr.io/<твой_github_логин>/caf-builder:4.0"
+      },
+      "env": {
+        "hostname": "SOLOMON"
+      }
+    },
+    "metadata": {
+      "reproducible": true,
+      "buildStartedOn": "2025-10-21T22:53:28.7913888Z",
+      "buildFinishedOn": "2025-10-21T22:53:28.7913888Z",
+      "completeness": {
+        "environment": true,
+        "materials": true,
+        "parameters": true
+      }
+    }
+  }
+}
