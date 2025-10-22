@@ -1,6 +1,6 @@
-# CAF — Compliance Automation Framework (Release v4.0)
+# CAF — Compliance Automation Framework (Release vv4.0)
 
-Это публичная витрина **институционального пакета** CAF v4.0.
+Это публичная витрина **институционального пакета** CAF vv4.0.
 
 ## Артефакты
 - ZIP bundle: "artifacts/CAF_DealBundle_4.0.zip"

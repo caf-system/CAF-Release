@@ -1,4 +1,4 @@
-# Verification guide (CAF v4.0)
+# Verification guide (CAF vv4.0)
 
 ## Hash (ZIP)
 ```powershell
