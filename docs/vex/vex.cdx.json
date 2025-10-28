@@ -1,0 +1,25 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:a9530bbf-5946-4bd2-ae04-c4ea8d3e33e6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-10-26T13:47:11.9384126Z",
+    "component": {
+      "bom-ref": "caf-system/CAF-Release@v4.0",
+      "version": "v4.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/caf-system/CAF-Release"
+        }
+      ],
+      "type": "application",
+      "supplier": {
+        "name": "caf-system"
+      },
+      "name": "CAF-Release"
+    }
+  },
+  "vulnerabilities": []
+}

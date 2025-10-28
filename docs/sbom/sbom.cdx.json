@@ -1,0 +1,410 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:a4c0ab35-dd48-45a0-8c6f-c96d57ddc548",
+  "metadata": {
+    "timestamp": "2025-10-26T13:37:34Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "CycloneDX CLI",
+          "version": "0.29.1.0"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "file",
+      "name": "README.md",
+      "version": "0.0.0-bdf919993fd6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "bdf919993fd6a612b4b79ff2e921ab49646edec8"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "cc7b2d30a829636a0f2710fd335906660d7612244599e462141f983be1b0a92a"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "cca81c638922d8e0c8e799138ed12e0f99d0d1c78a25be5b291f59a6d7e0f3937b3a8e95fd88454507dd6b2cf690683c"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "d7a591ce25e92ef347f9c10d1a2db23e41049e56f4722ce0150f1f060e7e6412ba63603547f4fffc3e8c06efe6d9d178a6f808e6e4d05bf9d30f962bbc399584"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "run_verify.ps1",
+      "version": "0.0.0-02baac909c23",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "02baac909c23dc8ba08f119ac15ac6f1090f4607"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "fdff5fe595886bd905360d98dfd325d30cd1b3dcba5498dbee9136582846d921"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "fc0326da4466c36ccfa965a70f1db2c26cae56f5ae224a303315982c1b014a0f9ade2005ce95a7cd343a3eec77a7114f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "20efb24b9796d838dea3fafff8fac41fbdb7657c743f29048e4209a71d28830a97c9e78e7d0737f6e7b456d4667c2c101e325328679ccfa3161348c81b5ff390"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "CAF_DealBundle_4.0.zip",
+      "version": "0.0.0-23af2fae9c20",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "23af2fae9c20a323629413ed079da6472d2cd013"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0e9fd17d18f1a600adb0cdd7090543f2be502af585acab8603415a7d743ed103"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "35463e3aa2b1c503362b2153a230e88fd4246db3f15e6433736e36983c9251cdf664a0caf975023455a54bd4bc6a9469"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "fa7977f61a732515f064444cf43e98a1e39d5821c99f533c3d260d7f6ec4082db66ff29e8b5fa9552a6ab4b8781ec1466b095341a8e4844e26587e264d6913df"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "DealBundle_Manifest.txt",
+      "version": "0.0.0-21695e2fda3e",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "21695e2fda3efab7b66239dd5ac27d737d2fa938"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0afb7833f24f902fbae5e0fa9fb8a6ba1bdfb70bac170c586b115bcd49b16056"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "dba81d014339ee3cbfa4c8bd10aff9b99f044d3af2b8b9e9915e8a065a05297445c9fdabdd2fdd61f3c853f179154b1a"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "27e4fc505a5e85ff46704bd15fb0df8e83de51fffa1a6e27faa12743b9d79fec72a5554f3a63e3416c961f26dcf05399fce855f49286a73d42a5b90ddfc039a1"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "DealBundle_Manifest.txt.asc",
+      "version": "0.0.0-96fe6d3f9655",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "96fe6d3f9655faca9dd35e82460a96b252d476ab"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "c1363501772b9a95897c22565bb96d654d0343fdf9f770ebd30c2b5280eb4efb"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "1c33f84a78369a2c4b7af61c4c555e6820bd970c55d36d83319987a3543757fde3df09e9a14d467c3ac2d664364ea53f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "3e8740d8b63054a18bf66ab9afa4ef754686d4672679867476c8eabe60d60e50f433993ff5b999583271b54ee3ee900a71523b221c1a012d2ffb91b2d68eac10"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "DealBundle_Manifest.txt.asc.tsr",
+      "version": "0.0.0-c1a4d8ab1976",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "c1a4d8ab1976d1e65aa2b7cc79656aeaa98035d8"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "8a5fdf492fb9df8c2291c2d07a1c3e9e1a24105b5eb5a39ab57ee89d04f329cb"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "68ba0f7894413e4fcb853a8be75a10395c4ed81aee6492f161cb1858fa9f616dea9ae4a4bdaa3bc4d12712e43e89e9b0"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "e13cf4bbe8e6153834b2a8c7552f64f02256c627ac8bfed2333f008af39d1e8f374ce9ab6101701b2e849a62b09dc74af1b1674d31e8dd624925ff2dfc420253"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "DealBundle_Manifest.txt.tsq",
+      "version": "0.0.0-23e5ceb1e28c",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "23e5ceb1e28ca6eef158d0ed7589fd8acbe2b53f"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "da8dbddc19e0d20aec31139aa6b41793bd7beef917e62914f0c75387ae15c3a3"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "02e6b1e571af2f5497f6b14f015b1a596b9dab8223db5c8bb8d1b1ef3bb4ca84273a93e1ecadd549a4ffc2b42aa6583b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "ead88594ab4213d41a73f0b63947f59a324fa1590140ff4edb9638dbea837efb4de0b982796cc26972dde1724205308b4cfabdff1086369e9bee34d9e151c433"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "DealBundle_Manifest.txt.tsr",
+      "version": "0.0.0-86faa6163ccb",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "86faa6163ccbd846e25b28bad7371af8bbe0db76"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "7523f219f79a4f1fb75dbefc20ae63d8e45e9b14ee3c0ecddf6299674200175f"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "17970a704f48c132a002a6bfe5d17b487b999963bbdffa6dd5ad669010352d3bdfbf4474d3b5bb8f6c160cb8a87a487c"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "4764cf2b975608c03fc35c4c7609543a14c016a5c4dc192569547848ea13665bab19aa1693fe812add1eb1016bfadd9b17fc52615f07b5114a5d8ad62943c85e"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "SHA256SUMS.txt",
+      "version": "0.0.0-d635abd32ae6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "d635abd32ae6e9b54005a1d5003b4a97ee0cb78a"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "87a8b694bf208faa79dc4420de5744644e759b5ffcc13254df8863e25722b87a"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "4e9f074b7791b26dd6044a737235cd313c1501fd102154229e1162640dda7f585ae63b3f263de475944aea6333483f69"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "615a2faf10798beb9501228a4dbb9e2e22af3a94f2c655ba412b25677c62b80c703828aba92c05bd102dcdc26a23cfd77490ce5c96966d1b8daeda065aee0804"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "SHA256SUMS.txt.asc",
+      "version": "0.0.0-a8e3a9fe7aa6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "a8e3a9fe7aa6201efbe9c316f77dc9d1b0aff3e6"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "6b7e921e05cecc6631e6770749ceec1e3d51604a633d91035e649b4b349e627e"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "c10c6e93197dad5d262f9dab0e79bc5eedb378dfdc9579093752f67b2a8c33c4fc64c19ebb65129e4194f61637672ac6"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "1b0ed1f13f8257bb0997ff9be51881dbe2d5f61180e7515f99217e19e3336a5b549d674e31a32b0c83c2f8b862d57131e88753e0191ca9066564c83af85553d0"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "SHA256SUMS.txt.asc.tsr",
+      "version": "0.0.0-ef546aa6f68b",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "ef546aa6f68b8eba8688715461bf4de83aa3bb29"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "854729eb3e0ddbfff6f6005524c69181fd5262c2dcf3381f92946598b99d3d1d"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "968a985d1dca95bf65d73bf9af0fafcbe7e2faad8d441417e6e20c26e035f3d79b5b8d3c308c481011a67d5581f21196"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "63744e8e6bca42891a58a9462a386739f27c908a2960cecdeba6adb05be9f884305b595de430f7415752ac829607a73ed5576e4dfb5a33fccd84592a85c62cc8"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "SHA256SUMS.txt.tsq",
+      "version": "0.0.0-711af770c7a8",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "711af770c7a807943147305e53a1e2ad453a353d"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "1a4e2ec9c9129d539b83667dd6f5b98cbbe62dea7b78f6c002362d38dc10c812"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "1bbb860fc7233678d04e4d9a1a5d1b4011feb93d812f8ab57eba3a3916b29cf37c62ce8fdf68a6f1f725541bbedb9c1e"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "44ef81e0ea81e2ee721de5f0bc0ea0bcf6edb70e0f468764e025b033ffb6327d551a59fde256b67dbb1c4fc8fd25206765d5b53febe93545c2578ea7e75275fd"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "SHA256SUMS.txt.tsr",
+      "version": "0.0.0-efd6799037eb",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "efd6799037ebbbee3c7f898769b982226c2ce430"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "5a997e8d0e391f22d5a5679bcda35b6867083695ba6a468a113251224b0158e9"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "730f529e7673a22ba91bd71c78f7424724d80df2f0d36949682dcd07e19edb340f5279954e49330a195faa068f973bf0"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "01d5282789ab4a6918b54d959a4fc78b45cd027dc4b5bf97465fc1d0b67138d3065c4ff80be94387ef7d99880156cde01aa2498970d8c1881dfbd7ae2883be9f"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "VERIFICATION.md",
+      "version": "0.0.0-37b52dd0479d",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "37b52dd0479d4aa011b7cd2cecc73d0ea8ba99b7"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "49525301bebfa84829d01788aa4164ce81293bf7d9264e1f109fe3502063b960"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b192bad6ffcd62d94acef20805a2e01eafd020b434b95e66a07475f3da9603330936332af101c920c823a0073e245323"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "bb031967e9baa3237c373adc77678ec97ab4e62860877880f554a2f4c0971cde37552bc75401f8a89162d552b16ad4534d50488199e8a7e7c647537f1ba8c2fd"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "CAF-GPG-KEY.asc",
+      "version": "0.0.0-e64f692fec6d",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "e64f692fec6dbad9fa9feafd99e0ab325b23a798"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "ca732690e9da31087a534d649f52ecc50edfdab3d16566602d7dff4654f9c546"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "acd838b504c7b8bd2885058a7ad65c650d8583d3512279e8aba9fd46aeedb4542ce173ccb885b5ecbc66aee2952e882e"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "38a363b6cdc7cfa36b7c8d5b4e846a4c042f7aeaae8bfbdf1dac0ce957a2e2049c9d1320555dfa9b3af1e88f49801ef9c22748e15c2f1e2517049c5c8ac0a2b8"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "provenance.4.0.slsa.json",
+      "version": "0.0.0-3428c510ef39",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "3428c510ef3966c6cb8f166fbac623347f073056"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "02c458b2a42f8a4853c31b758e69065272cfff223f29f4cb307459f10ef7bccd"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b2ee1c10793ebf0fdf284216d6963e99f38da4dce537584fef073ae29d2fe58f2466e9ff2a84efcac73ff97834195627"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "65ff32b6e6f945cb2162be504db950faf0a8d2789b239f031f3fc9dca25e64e321f88744f57446f7fd552e5c92a40321aadfc47023592aa25d341ef351b4bb66"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "sbom.4.0.spdx.json",
+      "version": "0.0.0-da39a3ee5e6b",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+        }
+      ]
+    }
+  ]
+}

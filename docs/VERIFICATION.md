@@ -1,8 +1,19 @@
-# Verification guide (CAF vv4.0)
+# Verification Guide
 
-## Hash (ZIP)
+This guide explains how to verify the CAF Release v4.0 artifacts offline.
+
+## Windows (PowerShell 7+)
 ```powershell
-Get-FileHash -Algorithm SHA256 .\artifacts/CAF_DealBundle_4.0.zip
-# Expected:
-0E9FD17D18F1A600ADB0CDD7090543F2BE502AF585ACAB8603415A7D743ED103
+pwsh -File .\run_verify.ps1 -Tag v4.0 -Repo caf-system/CAF-Release
 ```
+
+## Linux/macOS
+```bash
+./run_verify.sh -t v4.0 -r caf-system/CAF-Release
+```
+
+Artifacts covered:
+- CycloneDX SBOM + signature
+- VEX (CycloneDX) + signature
+- `SHA256SUMS.txt` + `SHA256SUMS.txt.asc`
+- `AUDIT_SEAL.json` + signature

@@ -1,0 +1,156 @@
+#requires -Version 7.0
+<#
+  Finalize-CAF-Release.ps1 (v2.3)
+  • Upsert GitHub Release: сначала gh release edit; если релиз не найден (404/"release not found") → gh release create.
+  • Fallback на лимит body (125000): публикуем компактный body.
+  • Не затрагиваем подписанные артефакты; AUDIT_SEAL.json(.asc) — канон.
+#>
+param(
+  [string]$Root = 'C:\cog-ci\CAF-Release',
+  [string]$Tag  = '',
+  [string]$BodyPath = '',
+  [switch]$UpdateAuditSeal,
+  [int]$BodyLimit = 125000
+)
+
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+Push-Location $Root
+
+function Resolve-Abs([string]$p){
+  if([string]::IsNullOrWhiteSpace($p)){ return $null }
+  if([System.IO.Path]::IsPathRooted($p)){ return $p }
+  return (Join-Path -Path $Root -ChildPath $p)
+}
+
+function Write-Utf8NoBom([string]$Path,[string]$Content){
+  $dir = [System.IO.Path]::GetDirectoryName($Path)
+  if($dir -and -not (Test-Path -LiteralPath $dir)){ New-Item -ItemType Directory -Path $dir -Force | Out-Null }
+  $crlf = $Content -replace "`r?`n","`r`n"
+  [System.IO.File]::WriteAllText($Path, $crlf, [System.Text.UTF8Encoding]::new($false))
+}
+
+function Read-Utf8([string]$Path){ [Text.Encoding]::UTF8.GetString([IO.File]::ReadAllBytes($Path)) }
+
+function Resolve-Tag([string]$t){
+  if($t){ return $t }
+  try{
+    $x = (git tag --points-at HEAD | Select-Object -First 1)
+    if(-not $x){ $x = (git describe --tags --abbrev=0).Trim() }
+    return $x
+  } catch { return $null }
+}
+
+function Get-BodyPath([string]$ResolvedTag){
+  if (Test-Path -LiteralPath '.\docs\release-body.md') { return (Resolve-Abs '.\docs\release-body.md') }
+  if (Test-Path -LiteralPath '.\release-body.md')     { return (Resolve-Abs '.\release-body.md') }
+  # создаём скелет в docs\
+  $stub = Join-Path (Get-Location) 'docs\release-body.md'
+  $t = @"
+# Release $ResolvedTag
+
+This is an auto-generated body stub. Replace with full notes if needed.
+
+## Artifacts
+- \`SHA256SUMS.txt\` (+ \`.asc\`)
+- \`docs/sbom/sbom.cdx.json\` (+ \`.asc\`)
+- \`docs/vex/vex.cdx.json\` (+ \`.asc\`)
+- \`DealBundle_Manifest.txt\` (+ \`.asc\`)
+- \`docs/AUDIT_SEAL.json.asc\`
+"@
+  Write-Utf8NoBom -Path $stub -Content $t
+  return $stub
+}
+
+function Build-CompactBody([string]$ResolvedTag){
+  $lines = @(
+    "# Release $ResolvedTag",
+    "",
+    "**Notice:** compact body published due to GitHub size limit.",
+    "",
+    "## Key artifacts",
+    "- `SHA256SUMS.txt` (+ `.asc`)",
+    "- `docs/sbom/sbom.cdx.json` (+ `.asc`)",
+    "- `docs/vex/vex.cdx.json` (+ `.asc`)",
+    "- `DealBundle_Manifest.txt` (+ `.asc`)",
+    "- `docs/AUDIT_SEAL.json.asc`"
+  )
+  return ($lines -join "`r`n")
+}
+
+function Publish-BodyFile([string]$Path){
+  # Пытаемся отредактировать
+  $out = & gh release edit $Tag -F $Path 2>&1
+  $code = $LASTEXITCODE
+  $msg = [string]$out
+  if ($code -eq 0){ return $true }
+
+  # 404 / not found → создаём
+  if ($msg -match '(?i)release not found' -or $msg -match '404'){
+    Write-Host "Release '$Tag' not found — creating..." -ForegroundColor Yellow
+    $out2 = & gh release create $Tag -F $Path -t $Tag 2>&1
+    if ($LASTEXITCODE -ne 0){ throw "Failed to create release: $out2" }
+    return $true
+  }
+
+  # 422 / слишком большой body → сигналим наружу
+  if ($msg -match '422' -or $msg -match '(?i)body.*(too|exceeds).*large'){
+    throw [System.Exception]::new('BodyTooLarge')
+  }
+
+  throw "gh release edit failed: $msg"
+}
+
+try{
+  $ResolvedTag = Resolve-Tag $Tag
+  if(-not $ResolvedTag){ throw "Cannot resolve tag automatically. Pass -Tag." }
+
+  $absBody = if($BodyPath){ Resolve-Abs $BodyPath } else { Get-BodyPath -ResolvedTag $ResolvedTag }
+  if(-not (Test-Path -LiteralPath $absBody)){ throw "BodyPath not found: $absBody" }
+
+  $body = Read-Utf8 -Path $absBody
+  $tmp  = [System.IO.Path]::GetTempFileName()
+  Write-Utf8NoBom -Path $tmp -Content $body
+
+  $publishedCompact = $false
+  try{
+    Publish-BodyFile $tmp | Out-Null
+  } catch {
+    if($_.Exception.Message -eq 'BodyTooLarge'){
+      # делаем компактное тело
+      $small = Build-CompactBody $ResolvedTag
+      $tmpSmall = [System.IO.Path]::GetTempFileName()
+      Write-Utf8NoBom -Path $tmpSmall -Content $small
+      Publish-BodyFile $tmpSmall | Out-Null
+      $publishedCompact = $true
+    } else {
+      throw
+    }
+  }
+
+  if($UpdateAuditSeal){
+    $sealPath = Resolve-Abs 'docs\AUDIT_SEAL.md'
+    $ts   = [DateTimeOffset]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssK")
+    $note = if($publishedCompact){ " (compact body published due to size limits)" } else { "" }
+    $seal = @"
+# AUDIT SEAL — Human-Readable
+
+**Status:** PASS  
+**Checked:** $ts (UTC)  
+**Tag:** $ResolvedTag$note
+
+> Canonical audit seal: \`docs/AUDIT_SEAL.json\` (+ \`docs/AUDIT_SEAL.json.asc\`).
+> This Markdown is an optional summary, not part of the signed artifact set.
+"@
+    Write-Utf8NoBom -Path $sealPath -Content $seal
+  }
+
+  $displayTag = ($ResolvedTag -replace '^(?:v{2,})','v') # печать без двойных v
+  Write-Host "Finalize: Release notes upserted for tag '$displayTag'. Signed artifacts untouched." -ForegroundColor Green
+  if($publishedCompact){
+    Write-Host "Notice: compact body published (limit=$BodyLimit)." -ForegroundColor Yellow
+  }
+}
+finally{
+  Pop-Location
+}

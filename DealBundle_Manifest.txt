@@ -1,0 +1,13 @@
+# DealBundle Manifest
+Name: CAF Institutional Package
+Version: 4.0
+Release-Date: 2025-10-26 19:13:16
+Artifacts:
+  - sbom.cdx.json
+  - sbom.cdx.json.asc
+  - vex.cdx.json
+  - vex.cdx.json.asc
+  - SHA256SUMS.txt
+  - SHA256SUMS.txt.asc
+Notes:
+  - Generated and verified by CAF Signing v4 <signing@caf-tech.local>

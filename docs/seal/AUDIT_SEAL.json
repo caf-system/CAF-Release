@@ -1,0 +1,30 @@
+{
+  "schema": "https://caf-system.example.org/schemas/audit-seal.v1",
+  "created": "2025-10-26T16:35:44.6410450Z",
+  "repo": "caf-system/CAF-Release",
+  "tag": "v4.0",
+  "commit": "73eaa0e",
+  "components": {
+    "manifest": {
+      "path": "DealBundle_Manifest.txt",
+      "ok": true,
+      "url": "https://github.com/caf-system/CAF-Release/releases/download/v4.0/DealBundle_Manifest.txt"
+    },
+    "checksums": {
+      "path": "SHA256SUMS.txt",
+      "ok": true,
+      "url": "https://github.com/caf-system/CAF-Release/releases/download/v4.0/SHA256SUMS.txt.asc"
+    },
+    "vex": {
+      "path": "docs/vex/vex.cdx.json",
+      "ok": true,
+      "url": "https://github.com/caf-system/CAF-Release/releases/download/v4.0/vex.cdx.json"
+    },
+    "sbom": {
+      "path": "docs/sbom/sbom.cdx.json",
+      "ok": true,
+      "url": "https://github.com/caf-system/CAF-Release/releases/download/v4.0/sbom.cdx.json"
+    }
+  },
+  "audit_pass": true
+}

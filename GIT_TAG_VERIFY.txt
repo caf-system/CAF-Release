@@ -1,0 +1,9 @@
+object 653f4f6dd21ba28ad12567f778b4607dc91a920d
+type commit
+tag v4.0
+tagger CAF System <ops@caf.system> 1761156939 +0300
+
+CAF Release 4.0
+gpg: ╨Я╨╛╨┤╨┐╨╕╤Б╤М ╤Б╨┤╨╡╨╗╨░╨╜╨░ 10/22/25 21:15:39 RTZ 2 (чшьр)
+gpg:                ╨║╨╗╤О╤З╨╛╨╝ RSA ╤Б ╨╕╨┤╨╡╨╜╤В╨╕╤Д╨╕╨║╨░╤В╨╛╤А╨╛╨╝ 2D13A5F63EDE2DB61646141FA922472D00E94B95
+gpg: ╨Ф╨╡╨╣╤Б╤В╨▓╨╕╤В╨╡╨╗╤М╨╜╨░╤П ╨┐╨╛╨┤╨┐╨╕╤Б╤М ╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╨╡╨╗╤П "CAF Signing v4 <signing@caf-tech.local>" [╨░╨▒╤Б╨╛╨╗╤О╤В╨╜╨╛╨╡]

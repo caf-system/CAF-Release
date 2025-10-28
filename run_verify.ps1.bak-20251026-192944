@@ -1,4 +1,4 @@
-# run_verify.ps1 v2.1 — Institutional Verify (one-step, robust)
+# run_verify.ps1 v2 — Institutional Verify (one-step, robust)
 [CmdletBinding()]
 param(
   [string]$Tag="v4.0",
@@ -22,15 +22,15 @@ $key = Join-Path $root "keys\CAF-GPG-KEY.asc"
 $manifest = Join-Path $root "DealBundle_Manifest.txt"
 $manifestAsc = "$manifest.asc"
 
-# Presence
+# 0. Presence
 foreach($f in @($sbom, "$sbom.asc", $vex, "$vex.asc", $sums, $sumsSig, $policy, $attrib, $key, $manifest, $manifestAsc)){
   if(-not (Test-Path $f)){ throw "Missing file: $f" } else { W "$f found" "OK" }
 }
 
-# GPG
+# 1. GPG import
 & gpg --import $key | Out-Null
 
-# Signatures
+# 2. Signatures
 W "Verifying SHA256SUMS.txt.asc"
 & gpg --verify $sumsSig $sums 2>$null; if($LASTEXITCODE -ne 0){ throw "GPG verify FAILED: SHA256SUMS.txt.asc" } else { W "SHA256SUMS signature valid" "OK" }
 
@@ -43,10 +43,11 @@ W "Verifying VEX signature"
 W "Verifying DealBundle Manifest signature"
 & gpg --verify $manifestAsc $manifest 2>$null; if($LASTEXITCODE -ne 0){ throw "GPG verify FAILED: DealBundle_Manifest.txt.asc" } else { W "DealBundle Manifest signature valid" "OK" }
 
-# Checksums (robust)
+# 3. Checksums consistency
 W "Recalculating checksums"
-$lines = Get-Content $sums -Raw -Encoding UTF8
+$lines = Get-Content $sums -Raw -ErrorAction Stop -Encoding UTF8 -ea 0
 $bad = @()
+# учитывать пути с пробелами: берём всё после хеша
 foreach($m in ([regex]::Matches($lines, '^(?<h>[0-9a-f]{64})\s+(?<f>.+)$', 'Multiline'))){
   $h = $m.Groups['h'].Value
   $f = $m.Groups['f'].Value
@@ -56,12 +57,12 @@ foreach($m in ([regex]::Matches($lines, '^(?<h>[0-9a-f]{64})\s+(?<f>.+)$', 'Mult
 }
 if($bad.Count -gt 0){ throw ("Checksum mismatch: " + ($bad -join ', ')) } else { W "All checksums match" "OK" }
 
-# Signed tag
+# 4. Signed tag
 W "Verifying signed tag $Tag"
 & git tag -v $Tag 2>&1 | Tee-Object -FilePath "GIT_TAG_VERIFY.txt" | Out-Null
 if($LASTEXITCODE -ne 0){ throw "Tag signature invalid" } else { W "Tag signature valid" "OK" }
 
-# Summary
+# 5. Summary
 $repourl = & git config --get remote.origin.url
 $head = (& git rev-parse --short HEAD).Trim()
 Write-Host ""
