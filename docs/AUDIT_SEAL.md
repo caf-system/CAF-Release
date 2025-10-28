@@ -1,7 +1,7 @@
 AUDIT SEAL — Human-Readable
 
 **Status:** PASS
-**Checked:** 2025-10-28T18:19:24Z (UTC)
+**Checked:** 2025-10-28T19:25:40Z (UTC)
 **Tag:** v4.0
 
 Canonical audit seal: docs/AUDIT_SEAL.json (and docs/AUDIT_SEAL.json.asc).
