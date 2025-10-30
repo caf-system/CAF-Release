@@ -1,9 +1,41 @@
 object 653f4f6dd21ba28ad12567f778b4607dc91a920d
 type commit
 tag v4.0
-tagger CAF System <ops@caf.system> 1761156939 +0300
+tagger CAF Signing v4 <signing@caf-tech.local> 1761781586 +0300
 
-CAF Release 4.0
-gpg: ╨Я╨╛╨┤╨┐╨╕╤Б╤М ╤Б╨┤╨╡╨╗╨░╨╜╨░ 10/22/25 21:15:39 RTZ 2 (чшьр)
-gpg:                ╨║╨╗╤О╤З╨╛╨╝ RSA ╤Б ╨╕╨┤╨╡╨╜╤В╨╕╤Д╨╕╨║╨░╤В╨╛╤А╨╛╨╝ 2D13A5F63EDE2DB61646141FA922472D00E94B95
-gpg: ╨Ф╨╡╨╣╤Б╤В╨▓╨╕╤В╨╡╨╗╤М╨╜╨░╤П ╨┐╨╛╨┤╨┐╨╕╤Б╤М ╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╨╡╨╗╤П "CAF Signing v4 <signing@caf-tech.local>" [╨░╨▒╤Б╨╛╨╗╤О╤В╨╜╨╛╨╡]
+CAF v4.0
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCAAdFiEELROl9j7eLbYWRhQfqSJHLQDpS5UFAmkBYYwACgkQqSJHLQDp
+S5V+txAApglSQR2TiYXEZrGhgLtqTp15QzhLnvbPQtici1k6lMSHajX+lnYIVl5J
+FZKY6V/NpltAHO13NQdWWo91+YzqKOj2DKr1Y4wcwRujKNm8kiCIU5oU4WlLsnj0
+9ftQAjkt55Jhtke0iIuFSjaAk1TRTPuNvS+p2lqAVrQklTqE/7rBRTLmjgYDyhkc
+wQvkJa6Op8sPWV/Ktr9SXKEVqNg1Jq+54p/740WfzTwUycssRNCz5utWqZv9rrF5
+AbW8kbrYDzMr2JldEBxTymIShegtW+6U3Y2avJE77aekcHAeJzC3Au509Jp9Z7zt
+iFx6zOoPJYhLvTUhQHXvg9cWFrD1uSh005Kb34d+V2hgWf2G+aFzO86sBMj0Hwrh
+SXVGg05cuHnKn0YKkECQlGB7uDOQUTmuYuxH61e181mmo5lkMHoMlU4mG9EPQoCv
+TuE5pZrx/M2rvNsMlkTsEybDASDxK5i3j98GE80ARXSevrfGEG5VfnFK9NliLAjg
+bDn5XzT6cHsLWm7a8IuTCxuWXnX4CidHtv6rkEh9JHET/bLusqWeJlPS8aOrSUzw
+WMJTO/xB2yekzeqj1s/IKb0mtyzPClTL3tyzBAoMaI3KPvG2mJ9/GZFsX7PW/iYv
+jRRFDc2lVQ8UBlT91cWlEPkC6TpX8gVQlBPw1rGWZ8uADe9KOUw=
+=O5PH
+-----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCAAdFiEELROl9j7eLbYWRhQfqSJHLQDpS5UFAmkCphcACgkQqSJHLQDp
+S5VBtg/+IFfkX188ri5TR0oQwCDi7CFNUWfPfChj38yUp/Uzm3Sm58Ib8UCNi06+
+pH9EtKFE4SYRjLEKdecooNESIQsKMLxuMqzTTfDxpqYZT70/AGR+iTT13bmqIJNP
+2A31pucoEtkThop0N4feDjKYk0LIeo/VemaLyKdzn2+OhrgdHUJ9um/w+u8CbiGg
+R1tj8Usxh+P12MXR42vIFzG3RcGt3QCjH299omFLCLPRIaAgryMJ7ibNWtJtCqKO
+bVfppAbor8uJOPjYQGttFc0PGmgfBOgWs8YoksoHpj+0FcbeC1UnN6KTJ9EatlsQ
+7Q/qu1gNr3uTkGLH3bdB/Y7x2RFHrd8vBI8JZ9urDCwVFNa1n+ipzp+vit6nJE5E
+sOLfItUCPMrNP7F0Wp08z6J0s1ARISvQpCdFIdBa/XkDxwmnbz0ntidxUHq/GIba
+5FczP2tzsgiYJQHcxJ1TGLxlRC3zYGjA6lu+d3lNlMErL/AKAmaKAco2hqxq85cK
+/XNhPzhWc4nfSHuVm1hagM1BQLuXWrQwXdz3ZYmJSkhHHgmWbP5UB0XZHvxWl25s
+hiq3rBPAujaqc/CqKzrfKMhK89ODLxE/PN+3buXC6InAi0je49h8zXyCumS2H0Wc
+g9PMLnoJVPdwedUlFeQ+Odxq9LR6zqtMd2GVigY34fhpuck7smE=
+=/eGh
+-----END PGP SIGNATURE-----
+gpg: Подпись сделана 10/30/25 02:46:26 RTZ 2 (����)
+gpg:                ключом RSA с идентификатором 2D13A5F63EDE2DB61646141FA922472D00E94B95
+gpg: Действительная подпись пользователя "CAF Signing v4 <signing@caf-tech.local>" [абсолютное]
