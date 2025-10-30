@@ -1,8 +1,9 @@
-AUDIT SEAL — Human-Readable
+# AUDIT SEAL
 
-**Status:** PASS
-**Checked:** 2025-10-29T00:23:43Z (UTC)
-**Tag:** v4.0
+- Tag: **v4.0**
+- Commit: **653f4f6dd21ba28ad12567f778b4607dc91a920d**
+- GPG FPR: **2D13A5F63EDE2DB61646141FA922472D00E94B95**
+- Time: **2025-10-30T05:07:32**
 
-Canonical audit seal: docs/AUDIT_SEAL.json (and docs/AUDIT_SEAL.json.asc).
-This Markdown is an optional summary, not part of the signed artifact set.2025-10-29T03:44:10Z | Re-sign tag v4.0 PASS | fpr=2D13A5F63ED2DBD6164641FA922472D00E94B95
+<!-- AUDIT-SEAL:v4.0:653f4f6dd21ba28ad12567f778b4607dc91a920d:2D13A5F63EDE2DB61646141FA922472D00E94B95 -->
+
